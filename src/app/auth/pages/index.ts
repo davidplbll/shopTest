@@ -1,0 +1,1 @@
+export * from './page-auth/page-auth.component';

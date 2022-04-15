@@ -1,0 +1,34 @@
+.container-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  a {
+    margin-bottom: 39px;
+    display: flex;
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    /* identical to box height */
+    text-decoration: none;
+    color: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    &:focus {
+      opacity: 1;
+    }
+    &:hover {
+      opacity: 1;
+      div {
+        border-bottom: 2px solid #2fcdc4;
+      }
+    }
+    div {
+      height: 0;
+      min-width: 28px;
+      margin-right: 24px;
+      padding-top: 10px;
+    }
+  }
+}

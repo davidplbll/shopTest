@@ -1,0 +1,38 @@
+<form class="custom-form" [formGroup]="authForm" (ngSubmit)="register()">
+  <div>
+    <label for="nameInput">NOMBRE</label>
+    <input type="name" #nameInput appCustomInput formControlName="name" />
+    <span *ngIf="validatecontrol('name')" class="error"> Requerido </span>
+  </div>
+  <div>
+    <label for="lastNameInput">APELLIDO</label>
+    <input
+      type="lastName"
+      #lastNameInput
+      appCustomInput
+      formControlName="lastName"
+    />
+    <span *ngIf="validatecontrol('lastName')" class="error"> Requerido </span>
+  </div>
+  <div>
+    <label for="emailInput">EMAIL</label>
+    <input type="email" #emailInput appCustomInput formControlName="email" />
+    <span *ngIf="validatecontrol('email')" class="error"> Requerido </span>
+  </div>
+  <div>
+    <label for="passwordInput">CONTRASEÑA</label>
+    <input
+      type="password"
+      #passwordInput
+      appCustomInput
+      formControlName="password"
+    />
+    <span *ngIf="validatecontrol('password')" class="error"> Requerido </span>
+  </div>
+
+  <div>
+    <button appCustomButton color="prymary" [disabled]="authForm.invalid">
+      Registro
+    </button>
+  </div>
+</form>

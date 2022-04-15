@@ -1,0 +1,28 @@
+<div class="container">
+  <img
+    src="assets/svg/background{{ viewMenu ? '-top' : '' }}.svg"
+    alt="background"
+    [ngClass]="{ backgroundtop: viewMenu }"
+    class="backGround"
+  />
+  <div class="containerAuth">
+    <img src="assets/svg/r-logo.svg" alt="logo" />
+    <app-stepper
+      *ngIf="!viewMenu; else menu"
+      [options]="stepperOptions"
+      (selectedChange)="chageStep($event)"
+      [ngSwitch]="actualOption"
+    >
+      <app-login-form *ngSwitchCase="'login'"></app-login-form>
+      <app-siggunp-form *ngSwitchCase="'register'"></app-siggunp-form>
+    </app-stepper>
+    <ng-template #menu>
+      <app-initial-menu></app-initial-menu>
+    </ng-template>
+  </div>
+</div>
+<div class="menu-button" (click)="viewMenu = !viewMenu">
+  <div *ngIf="!viewMenu"></div>
+  <div *ngIf="!viewMenu"></div>
+  <img *ngIf="viewMenu" src="assets/svg/ic_back.svg" alt="ic_back" />
+</div>

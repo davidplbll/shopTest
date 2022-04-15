@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="options-container">
+    <div
+      *ngFor="let option of options"
+      [ngClass]="{ active: selected === option.id }"
+      (click)="selectOption(option.id)"
+    >
+      {{ option?.label }}
+    </div>
+  </div>
+  <div class="content-container">
+    <ng-content> </ng-content>
+  </div>
+</div>

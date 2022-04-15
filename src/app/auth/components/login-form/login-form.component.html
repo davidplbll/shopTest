@@ -1,0 +1,31 @@
+<form class="custom-form" [formGroup]="authForm" (ngSubmit)="login()">
+  <div>
+    <label for="emailInput">EMAIL</label>
+    <input type="email" #emailInput appCustomInput formControlName="email" />
+    <span *ngIf="validatecontrol('email')" class="error"> Requerido </span>
+  </div>
+  <div>
+    <label for="passwordInput">CONTRASEÑA</label>
+    <input
+      type="password"
+      #passwordInput
+      appCustomInput
+      formControlName="password"
+    />
+    <span *ngIf="validatecontrol('password')" class="error"> Requerido </span>
+  </div>
+  <div>
+    <div class="subscribe-container">
+      <app-check-input></app-check-input>
+      <span>Suscribirse al Newsletter</span>
+    </div>
+  </div>
+  <div>
+    <button appCustomButton color="prymary" [disabled]="authForm.invalid">
+      Ingreso
+    </button>
+  </div>
+  <div>
+    <span class="forgot-pass">Olvide Contraseña</span>
+  </div>
+</form>
