@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  db: {
+    name: 'users',
+    version: '1.0',
+    description: 'db for users',
+  }
 };
 
 /*

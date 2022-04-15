@@ -8,7 +8,7 @@
   <div class="containerAuth">
     <img src="assets/svg/r-logo.svg" alt="logo" />
     <app-stepper
-      *ngIf="!viewMenu; else menu"
+      *ngIf="!viewMenu && !vieSuccess "
       [options]="stepperOptions"
       (selectedChange)="chageStep($event)"
       [ngSwitch]="actualOption"
@@ -16,9 +16,10 @@
       <app-login-form *ngSwitchCase="'login'"></app-login-form>
       <app-siggunp-form *ngSwitchCase="'register'"></app-siggunp-form>
     </app-stepper>
-    <ng-template #menu>
-      <app-initial-menu></app-initial-menu>
-    </ng-template>
+    <div *ngIf="vieSuccess" class="success">
+      <img src="assets/svg/success.svg" alt="success" />
+    </div>
+    <app-initial-menu *ngIf="viewMenu"></app-initial-menu>
   </div>
 </div>
 <div class="menu-button" (click)="viewMenu = !viewMenu">

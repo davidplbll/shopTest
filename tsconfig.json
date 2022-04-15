@@ -23,6 +23,7 @@
       "@auth": ["src/app/auth/auth.module.ts"],
       "@auth/*": ["src/app/auth/*"],
       "@shared": ["src/app/shared/shared.module.ts"],
+      "@env": ["src/environments/environment.ts"],
       "@shared/*": ["src/app/shared/*"]
     }
   },

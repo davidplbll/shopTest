@@ -111,5 +111,8 @@
       }
     }
   },
-  "defaultProject": "omni-shop"
+  "defaultProject": "omni-shop",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
