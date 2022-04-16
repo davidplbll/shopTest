@@ -1,7 +1,9 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { PRODUCT_CONFIGURATION } from "../../interfaces";
+import { PRODUCT, PRODUCT_CONFIGURATION } from "../../interfaces";
 import { FormBuilder, Validators } from '@angular/forms'
-
+import { addProductShopping } from '../../actions'
+import { getProductSelector } from '../../reducers/product.reducer'
+import { Store } from '@ngrx/store';
 @Component({
   selector: 'app-product-options',
   templateUrl: './product-options.component.html',
@@ -9,20 +11,28 @@ import { FormBuilder, Validators } from '@angular/forms'
 })
 export class ProductOptionsComponent implements OnChanges {
 
+  @Input() product!: PRODUCT;
   @Input() productConfigurations: PRODUCT_CONFIGURATION[] = [];
   configurationForm = this.fb.group({
     amount: [0, Validators.required],
   });
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private store: Store) { }
+
   ngOnChanges(): void {
     this.configurationForm.reset();
+    Object.keys(this.configurationForm.controls).filter(key => key != 'amount').forEach(key => {
+      this.configurationForm.removeControl(key);
+    });
     if (this.productConfigurations.length) {
       this.productConfigurations.forEach(
         (configuration) => {
-          this.configurationForm.addControl(configuration.name, this.fb.control('', Validators.required));
+          this.configurationForm.addControl(configuration.name,
+            this.fb.control(configuration.options.find(option => option.amount > 0)?.name, Validators.required)
+          );
         }
       )
     }
+    this.configurationForm.get('amount')?.setValue(1);
   }
 
   chageAmount(value: string) {
@@ -34,5 +44,20 @@ export class ProductOptionsComponent implements OnChanges {
     }
   }
 
+  save() {
+    const { amount, ...data } = this.configurationForm.value;
+    this.store.dispatch(
 
+      addProductShopping({
+        product: {
+          product: this.product,
+          amount,
+          configuration: Object.entries(data).map(
+            ([name, option]) => ({
+              name, option: String(option)
+            }))
+        },
+      })
+    )
+  }
 }

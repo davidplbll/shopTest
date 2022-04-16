@@ -1,16 +1,12 @@
-import { ElementRef, HostListener, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { ElementRef, OnInit, } from '@angular/core';
 import { Directive, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appCustomInput]'
 })
-export class CustomInputDirective implements OnInit, OnChanges {
+export class CustomInputDirective implements OnInit {
 
   constructor(private render: Renderer2, private el: ElementRef) {
-    console.log("el ", el);
-  }
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log("changes ", changes);
   }
 
   ngOnInit(): void {

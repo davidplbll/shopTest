@@ -10,9 +10,7 @@ export class DataBaseService {
 
   openDatabase() {
     const { db: { description, name, version } } = environment;
-    const objectStore = (window as any).openDatabase(name, version, description, 2 * 1024 * 1024, (event: any) => (
-      console.log(event)
-    ));
+    const objectStore = (window as any).openDatabase(name, version, description, 2 * 1024 * 1024);
     objectStore.transaction((tx: any) => {
       tx.executeSql('CREATE TABLE IF NOT EXISTS USER (email unique, name, lastName,password)');
     });

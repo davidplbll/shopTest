@@ -27,6 +27,6 @@ export const loadRegisterSuccess = createAction(
 );
 
 export const loadRegisterFailure = createAction(
-  '[Auth] Login Failure',
+  '[Auth] Register Failure',
   props<{ error: any }>()
 );

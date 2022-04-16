@@ -21,3 +21,33 @@
   list-style-type: none;
   margin-right: 10px;
 }
+
+li:not([class*="count-items"]) {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  div {
+    border-radius: 100%;
+  }
+  &:hover {
+    cursor: pointer;
+    background: #cbc8c838;
+  }
+}
+.count-items {
+  display: flex;
+  flex-direction: row-reverse;
+  label {
+    font-family: 'Proxima Nova';
+    font-size: 9px;
+    text-align: center;
+    color: #ffffff;
+    background: #d61043;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    line-height: 15px;
+    margin-top: 5px;
+    margin-right: 7px;
+  }
+}

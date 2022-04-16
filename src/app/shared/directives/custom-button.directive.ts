@@ -14,8 +14,6 @@ export class CustomButtonDirective {
     }
   }
   constructor(private render: Renderer2, private el: ElementRef) {
-    console.log("el ", el);
-
   }
 
   ngOnInit(): void {
@@ -23,7 +21,6 @@ export class CustomButtonDirective {
     if (this.color) {
       this.render.addClass(this.el.nativeElement, this.color);
     }
-    console.log("color ", this.color);
   }
 
 }

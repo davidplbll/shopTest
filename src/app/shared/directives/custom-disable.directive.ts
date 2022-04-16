@@ -6,7 +6,6 @@ import { Directive, ElementRef, Input, OnChanges, Renderer2, SimpleChanges } fro
 export class CustomDisableDirective implements OnChanges {
   @Input() appCustomDisable: boolean = false;
   constructor(private render: Renderer2, private el: ElementRef) {
-    console.log("el ", el);
 
   }
   ngOnChanges(): void {

@@ -8,10 +8,13 @@ my-app {
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url('./assets/fonts/Proxima Nova Font.otf') format("opentype");
+  src: url('./assets/fonts/Proxima Nova Font.otf') format('opentype');
   font-weight: 300;
 }
 
+.swal2-shown {
+  background-color: #393fd0;
+}
 
 .custom-input {
   &:not([type='checkbox']):not(label) {
@@ -109,16 +112,23 @@ my-app {
   height: 40px;
   border: 0;
   cursor: pointer;
+  background: #2b2b2b;
   &.search {
-    background: url(./assets/svg/search-icon.svg) no-repeat center;
+    -webkit-mask: url(./assets/svg/search-icon.svg) no-repeat center;
+    &:hover{
+      background: #2fc0ba;
+    }
   }
   &.like {
-    background: url(./assets/svg/like-icon.svg) no-repeat center;
+    -webkit-mask: url(./assets/svg/like-icon.svg) no-repeat center;
+    &:hover{
+      background: #b12c2c;
+    }
   }
   &.shopping {
     background: url(./assets/svg/shopping-icon.svg) no-repeat center;
   }
   &.menu {
-    background: url(./assets/svg/menu-icon.svg) no-repeat center;
+    -webkit-mask: url(./assets/svg/menu-icon.svg) no-repeat center;
   }
 }

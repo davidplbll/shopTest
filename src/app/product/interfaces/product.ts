@@ -17,3 +17,12 @@ export interface PRODUCT_CONFIGURATION {
         amount: number;
     }[]
 }
+
+export interface SHOPPING_PRODDUCT {
+    product?: PRODUCT;
+    amount: number;
+    configuration: {
+        name: string;
+        option: string;
+    }[]
+}

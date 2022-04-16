@@ -51,5 +51,184 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 2,
+        "name": "Pantalones para Caballero",
+        "alias": "The Sideswept Dhoti",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, inventore. Hic numquam vero tempora beatae laudantium repellendus autem quis dolorem laboriosam, eos iste illum omnis sit voluptatibus aperiam ad asperiores?",
+        "price": 50,
+        "image": "assets/images/product.png",
+        "rating": 4,
+        "configurations": [
+            {
+                "name": "TAMAÑO",
+                "options": [
+                    {
+                        "name": "M",
+                        "amount": 0
+                    },
+                    {
+                        "name": "L",
+                        "amount": 1
+                    },
+                    {
+                        "name": "XL",
+                        "amount": 0
+                    },
+                    {
+                        "name": "XXL",
+                        "amount": 1
+                    }
+                ]
+            },
+            {
+                "name": "KIT",
+                "options": [
+                    {
+                        "name": "AWAY",
+                        "amount": 1
+                    },
+                    {
+                        "name": "THIRD",
+                        "amount": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Pantalones para Niño",
+        "alias": "The Sideswept Dhoti",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, inventore. Hic numquam vero tempora beatae laudantium repellendus autem quis dolorem laboriosam, eos iste illum omnis sit voluptatibus aperiam ad asperiores?",
+        "price": 200,
+        "image": "assets/images/product.png",
+        "rating": 5,
+        "configurations": [
+            {
+                "name": "TAMAÑO",
+                "options": [
+                    {
+                        "name": "S",
+                        "amount": 0
+                    },
+                    {
+                        "name": "XS",
+                        "amount": 0
+                    },
+                    {
+                        "name": "M",
+                        "amount": 1
+                    },
+                    {
+                        "name": "L",
+                        "amount": 1
+                    }
+                ]
+            },
+            {
+                "name": "KIT",
+                "options": [
+                    {
+                        "name": "HOME",
+                        "amount": 0
+                    },
+                    {
+                        "name": "AWAY",
+                        "amount": 1
+                    },
+                    {
+                        "name": "THIRD",
+                        "amount": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Pantalones para Invierno",
+        "alias": "The Sideswept Dhoti",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, inventore. Hic numquam vero tempora beatae laudantium repellendus autem quis dolorem laboriosam, eos iste illum omnis sit voluptatibus aperiam ad asperiores?",
+        "price": 300,
+        "image": "assets/images/product.png",
+        "rating": 4,
+        "configurations": [
+            {
+                "name": "TAMAÑO",
+                "options": [
+                    {
+                        "name": "S",
+                        "amount": 0
+                    },
+                    {
+                        "name": "M",
+                        "amount": 1
+                    },
+                    {
+                        "name": "L",
+                        "amount": 1
+                    },
+                    {
+                        "name": "XL",
+                        "amount": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Pantalones para Playa",
+        "alias": "The Sideswept Dhoti",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, inventore. Hic numquam vero tempora beatae laudantium repellendus autem quis dolorem laboriosam, eos iste illum omnis sit voluptatibus aperiam ad asperiores?",
+        "price": 150,
+        "image": "assets/images/product.png",
+        "rating": 4,
+        "configurations": [
+            {
+                "name": "TAMAÑO",
+                "options": [
+                    {
+                        "name": "S",
+                        "amount": 0
+                    },
+                    {
+                        "name": "M",
+                        "amount": 1
+                    },
+                    {
+                        "name": "L",
+                        "amount": 1
+                    },
+                    {
+                        "name": "XL",
+                        "amount": 0
+                    },
+                    {
+                        "name": "XXL",
+                        "amount": 0
+                    }
+                ]
+            },
+            {
+                "name": "KIT",
+                "options": [
+                    {
+                        "name": "HOME",
+                        "amount": 0
+                    },
+                    {
+                        "name": "AWAY",
+                        "amount": 1
+                    },
+                    {
+                        "name": "THIRD",
+                        "amount": 1
+                    }
+                ]
+            }
+        ]
     }
 ]

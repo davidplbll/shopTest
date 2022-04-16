@@ -35,7 +35,7 @@ export class PageAuthComponent implements OnInit, OnDestroy {
       takeUntil(this.unSubscribeall$),
       filter(res => res),
       tap(() => this.vieSuccess = true),
-      delay(2000)
+      delay(1000)
     ).subscribe(
       () => this.router.navigate(['/'])
     )

@@ -2,25 +2,10 @@
   <h1>También te podría gustar</h1>
   <div class="container">
     <div class="container-list">
-      <div>
-        <img src="assets/images/product2.png" alt="" />
-        <h3>Producto 1</h3>
-        <span>{{ 130 | currency: 'USD' }}</span>
-      </div>
-      <div>
-        <img src="assets/images/product2.png" alt="" />
-        <h3>Producto 1</h3>
-        <span>{{ 130 | currency: 'USD' }}</span>
-      </div>
-      <div>
-        <img src="assets/images/product2.png" alt="" />
-        <h3>Producto 1</h3>
-        <span>{{ 130 | currency: 'USD' }}</span>
-      </div>
-      <div>
-        <img src="assets/images/product2.png" alt="" />
-        <h3>Producto 1</h3>
-        <span>{{ 130 | currency: 'USD' }}</span>
+      <div *ngFor="let product of products$ | async"  (click)="selectProduct(product)">
+        <img [src]="product?.image" alt="" />
+        <h3>{{ product?.name }}</h3>
+        <span>{{ product?.price | currency: 'USD' }}</span>
       </div>
     </div>
   </div>

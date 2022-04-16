@@ -2,10 +2,18 @@
   <img src="assets/svg/logo.svg" alt="" />
   <div>
     <ul class="container-icons">
-      <li class="icon search"></li>
-      <li class="icon like"></li>
-      <li class="icon shopping"></li>
-      <li class="icon menu"></li>
+      <li>
+        <div class="icon search"></div>
+      </li>
+      <li>
+        <div class="icon like"></div>
+      </li>
+      <li class="icon shopping count-items">
+        <label *ngIf="cartAmount > 0">{{ cartAmount }}</label>
+      </li>
+      <li>
+        <div class="icon menu"></div>
+      </li>
     </ul>
   </div>
 </div>

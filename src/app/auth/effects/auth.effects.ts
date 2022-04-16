@@ -47,11 +47,9 @@ export class AuthEffects {
   );
 
   loginFailure$ = createEffect(() =>
-
     this.actions$.pipe(
       ofType(AuthActions.loadLoginFailure),
       tap(({ error }) => {
-        console.log("error ", error);
         this.alertService.MessageError('Usuario o contraseña incorrectos')
       })
     ),
@@ -63,8 +61,16 @@ export class AuthEffects {
     this.actions$.pipe(
       ofType(AuthActions.loadRegisterFailure),
       tap(({ error }) => {
-        console.log("error ", error);
         this.alertService.MessageError('Usuario ya registrado')
+      })
+    ),
+    { dispatch: false }
+  );
+  registerSuccess$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(AuthActions.loadRegisterSuccess),
+      tap(({ data }) => {
+        localStorage.setItem('user', JSON.stringify(data));
       })
     ),
     { dispatch: false }
