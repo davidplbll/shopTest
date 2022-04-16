@@ -22,6 +22,10 @@
     "paths": {
       "@auth": ["src/app/auth/auth.module.ts"],
       "@auth/*": ["src/app/auth/*"],
+      "@layout": ["src/app/layout/layout.module.ts"],
+      "@layout/*": ["src/app/layout/*"],
+      "@product": ["src/app/product/product.module.ts"],
+      "@product/*": ["src/app/product/*"],
       "@shared": ["src/app/shared/shared.module.ts"],
       "@env": ["src/environments/environment.ts"],
       "@shared/*": ["src/app/shared/*"]

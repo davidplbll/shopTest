@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="info-container">
+    <div class="product-image">
+      <img [src]="product?.image" alt="" />
+    </div>
+    <div class="product-info">
+      <h1>
+        {{ product?.name }}
+        <br />
+        “{{ product?.alias }}”
+      </h1>
+      <app-star-rating [rating]="product?.rating ?? 0"></app-star-rating>
+      <h2>{{ product?.price | currency: 'USD' }}</h2>
+      <hr />
+      <app-product-options
+        [productConfigurations]="product?.configurations ?? []"
+      ></app-product-options>
+      <hr />
+    </div>
+  </div>
+  <div class="product-description">
+    <h3>Descripción</h3>
+    <p
+      [ngStyle]="{
+        height: viewMoreDescription ? 'auto' : '40px'
+      }"
+    >
+      {{ product?.description }}
+    </p>
+    <label (click)="viewMoreDescription = !viewMoreDescription">
+      leer {{ viewMoreDescription ? 'menos' : 'más' }}
+    </label>
+  </div>
+  <app-other-products></app-other-products>
+</div>

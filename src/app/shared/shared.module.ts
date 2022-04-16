@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StepperComponent, StepComponent } from './components';
-import { CheckInputComponent } from './components/check-input/check-input.component';
+import { StepperComponent, StepComponent, CheckInputComponent, TopBarComponent } from './components';
 import { ReactiveFormsModule } from "@angular/forms";
-import { CustomButtonDirective, CustomInputDirective } from './directives'
+import { CustomButtonDirective, CustomInputDirective, CustomDisableDirective } from './directives';
+import { FooterComponent } from './components/footer/footer.component';
+import { StarRatingComponent } from './components/star-rating/star-rating.component';
 @NgModule({
   declarations: [
     StepperComponent,
@@ -11,6 +12,10 @@ import { CustomButtonDirective, CustomInputDirective } from './directives'
     CustomInputDirective,
     CheckInputComponent,
     CustomButtonDirective,
+    TopBarComponent,
+    FooterComponent,
+    StarRatingComponent,
+    CustomDisableDirective,
 
   ],
   imports: [
@@ -22,7 +27,11 @@ import { CustomButtonDirective, CustomInputDirective } from './directives'
     CustomInputDirective,
     StepComponent,
     CheckInputComponent,
-    CustomButtonDirective
+    CustomButtonDirective,
+    TopBarComponent,
+    FooterComponent,
+    StarRatingComponent,
+    CustomDisableDirective
   ]
 })
 export class SharedModule { }

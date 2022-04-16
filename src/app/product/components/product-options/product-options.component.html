@@ -1,0 +1,25 @@
+<form [formGroup]="configurationForm">
+  <ol *ngFor="let config of productConfigurations">
+    <li>{{ config?.name }}</li>
+    <li class="radio" *ngFor="let option of config?.options; index as i">
+      <input
+        [name]="config.name"
+        value="{{option.name}}"
+        type="radio"
+        id="{{ config.name }}{{ i }}"
+        [appCustomDisable]="option?.amount === 0"
+        formControlName="{{ config.name }}"
+      />
+      <label for="{{ config.name }}{{ i }}">{{ option?.name }}</label>
+    </li>
+  </ol>
+  <ol>
+    <li>Cantidad</li>
+    <li class="amount">
+      <label (click)="chageAmount('-')">-</label>
+      <input type="number" appCustomInput formControlName="amount" />
+      <label (click)="chageAmount('+')">+</label>
+    </li>
+  </ol>
+  <button appCustomButton>Añadir al carrito</button>
+</form>

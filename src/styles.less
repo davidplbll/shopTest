@@ -6,6 +6,12 @@ my-app {
   height: 100vh;
   margin: 0;
 }
+@font-face {
+  font-family: Proxima Nova;
+  src: url('./assets/fonts/Proxima Nova Font.otf') format("opentype");
+  font-weight: 300;
+}
+
 
 .custom-input {
   &:not([type='checkbox']):not(label) {
@@ -96,4 +102,23 @@ my-app {
   text-align: end;
   margin-top: 5px;
   text-transform: uppercase;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  cursor: pointer;
+  &.search {
+    background: url(./assets/svg/search-icon.svg) no-repeat center;
+  }
+  &.like {
+    background: url(./assets/svg/like-icon.svg) no-repeat center;
+  }
+  &.shopping {
+    background: url(./assets/svg/shopping-icon.svg) no-repeat center;
+  }
+  &.menu {
+    background: url(./assets/svg/menu-icon.svg) no-repeat center;
+  }
 }

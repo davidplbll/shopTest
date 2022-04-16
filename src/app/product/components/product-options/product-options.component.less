@@ -1,0 +1,93 @@
+form {
+  padding: 0 20px 0 22px;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  li {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color: #455a64;
+    font-family: 'Proxima Nova';
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    label {
+      cursor: pointer;
+      border: 1px solid #dedede;
+      text-align: center;
+      height: 40px;
+      line-height: 39px;
+    }
+  }
+  .radio {
+    height: 40px;
+    min-width: 60px;
+    input {
+      display: none;
+    }
+  }
+  .radio input:checked + label {
+    background: #33333a;
+    color: #ffffff;
+  }
+  .radio input:disabled + label {
+    background: rgba(236, 239, 241, 0.4);
+    opacity: 0.32;
+    color: #455a64;
+    border-width: 0;
+  }
+  .amount {
+    border: 1px solid #dedede;
+    display: flex;
+    flex-direction: row;
+    width: 120px;
+    align-content: space-between;
+    input {
+      border: none !important;
+      color: #515356;
+      font-family: 'Proxima Nova';
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+    label {
+      border: none;
+      font-family: 'Proxima Nova';
+      font-size: 18px;
+      line-height: 38px;
+      /* identical to box height, or 167% */
+      min-width: 36px;
+      color: #000000;
+    }
+  }
+}
+
+button {
+  height: 40px;
+  font-family: 'Proxima Nova';
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #33333a;
+  border: none;
+}
+// .radio input:not(:checked) + label {
+//   --bg-opacity: 0;
+//   box-shadow: none;
+//   border: 2px solid red;
+// }

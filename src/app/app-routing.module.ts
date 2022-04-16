@@ -4,12 +4,16 @@ import { AppComponent } from "./app.component"
 
 const routes: Routes = [
   {
-    path: 'auth',
+    path: '',
     component: AppComponent,
     children: [
       {
+        path: 'auth',
+        loadChildren: () => import('@auth').then(m => m.AuthModule)
+      },
+      {
         path: '',
-        loadChildren: () => import('@auth/auth.module').then(m => m.AuthModule)
+        loadChildren: () => import('@layout').then(m => m.LayoutModule)
       }
     ]
   }
