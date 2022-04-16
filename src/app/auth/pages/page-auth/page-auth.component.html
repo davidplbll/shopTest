@@ -5,10 +5,15 @@
     [ngClass]="{ backgroundtop: viewMenu }"
     class="backGround"
   />
+  <img
+    src="assets/svg/ecommerce_solution.svg"
+    alt="background-2"
+    class="backGround-desktop"
+  />
   <div class="containerAuth">
     <img src="assets/svg/r-logo.svg" alt="logo" />
     <app-stepper
-      *ngIf="!viewMenu && !vieSuccess "
+      *ngIf="!viewMenu && !vieSuccess"
       [options]="stepperOptions"
       (selectedChange)="chageStep($event)"
       [ngSwitch]="actualOption"
